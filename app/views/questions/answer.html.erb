@@ -1,11 +1,19 @@
-<p><%= @question%></p>
-<p><i>-You</i></p>
+<div class = "title">
+  <h1>Stupid Coaching</h1>
 
-<% if @question == "I am going to work" %>
-  <p>Great!</p>
-<% elsif @question.end_with?("?") %>
-  <p>Silly question, get dressed and go to work!</p>
-<% else %>
-  <p>I don't care, get dressed and go to work!</p>
-<% end %>
-<p><i>-Your coach</i></p>
+  <div class = "question">
+    <p><%= @question%></p>
+    <p><i>-You</i></p>
+  </div>
+
+  <div class = "answer">
+  <% if @question == "I am going to work" %>
+    <p><strong>Great!</strong></p>
+  <% elsif @question.end_with?("?") %>
+    <p> <strong> Silly question, get dressed and go to work! </strong></p>
+  <% else %>
+    <p><strong>I don't care, get dressed and go to work! </strong></p>
+  <% end %>
+  <p><i>-Your coach</i></p>
+  </div>
+</div>
